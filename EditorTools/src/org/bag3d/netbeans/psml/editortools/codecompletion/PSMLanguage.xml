@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : PSMLanguage.xml
+    Created on : July 21, 2011, 10:38 AM
+    Author     : emahfoud
+    Description:
+        This document contains descriptions of the keywords of the PSM language
+        in order to be used in code completion menu
+-->
+<PSML>
+    <wordGroup color="blue" type="keyword">
+        <word name = "if">
+            <desc><![CDATA[ The regular "if" statement.
+            Example: if(<condition>) {
+            }]]></desc>
+        </word>
+        <word name = "else">
+            <desc><![CDATA[ The regular "else" statement.
+            Example: if(<condition>) {
+            } else {
+            }]]></desc>
+        </word>
+        <word name = "for">
+            <desc><![CDATA[ The regular "for" statement.
+            It doesn't support integers.
+            Example: for(int i = 0; i < max; i++) {
+            }]]></desc>
+        </word>
+        <word name = "import">
+            <desc><![CDATA[ Use this keyword to import external grammar files.]]></desc>
+        </word>
+        <word name = "package">
+            <desc><![CDATA[ Use this keyword to specify the package of the current script.]]></desc>
+        </word>
+        <word name = "rules">
+            <desc><![CDATA[ The rules block contains the rules that will produce
+            the procedural model of the current method. A rule is passed a parent
+            shape which is the non-terminal on which the containing method is called.
+            The properties of the parent shape can be accessed using the myShape keyword.
+            Example: grammar Test {
+                public Shape main(final Shape myShape) {
+                    rules {
+                    }
+                    return myShape;
+                }
+            }]]></desc>
+        </word>
+        <word name = "instanceof">
+            <desc><![CDATA[ This keyword can be used to test for the type of the
+            parent shape, in order to determine which properties to read.
+            Example: if(myShape instanceof Box]]></desc>
+        </word>
+    </wordGroup>
+    <wordGroup color="0x9900ff" type="namespace">
+        <word name = "myShape">
+            <desc><![CDATA[ The myShape keyword is used to access parent shape's
+            properties in methods and rules. It also can be used with the instanceof
+            keyword to test for its type.]]></desc>
+        </word>
+        <word name = "Shape3D">
+            <desc><![CDATA[ This namespace contains all the shapes currently
+            supported by the grammar. It can be used with the instanceof keyword
+            to test for the type of a shape.]]></desc>
+        </word>
+    </wordGroup>
+    <wordGroup color = "0x006699" type="type">
+        <word name = "Shape">
+            <desc><![CDATA[ This type is used to hold a reference to a Shape object.
+            It's typically used to deal with boolean operations.]]></desc>
+        </word>
+        <word name = "String">
+            <desc><![CDATA[ A typical String variable.]]></desc>
+        </word>
+        <word name = "float">
+            <desc><![CDATA[ A typical float variable.]]></desc>
+        </word>
+    </wordGroup>
+    <wordGroup color = "black" type="regular">
+        <word name = "s.x">
+            <desc><![CDATA[ The dimension in the X axis.]]></desc>
+        </word>
+        <word name = "s.y">
+            <desc><![CDATA[ The dimension in the Y axis.]]></desc>
+        </word>
+        <word name = "s.z">
+            <desc><![CDATA[ The dimension in the Z axis.]]></desc>
+        </word>
+        <word name = "t.x">
+            <desc><![CDATA[ The translation in the X axis.]]></desc>
+        </word>
+        <word name = "t.y">
+            <desc><![CDATA[ The translation in the Y axis.]]></desc>
+        </word>
+        <word name = "t.z">
+            <desc><![CDATA[ The translation in the Z axis.]]></desc>
+        </word>
+        <word name = "r">
+            <desc><![CDATA[ The radius of the shape.]]></desc>
+        </word>
+        <word name = "h">
+            <desc><![CDATA[ The height of the shape.]]></desc>
+        </word>
+        <word name = "print">
+            <desc><![CDATA[ Outputs the passed string to the console.
+            Example: print("Created a wall at level " + split_index);]]></desc>
+        </word>
+        <word name = "geometricBoolean">
+            <desc><![CDATA[ Performs a boolean operation on the Shape object.
+            Example: shapeA.geometricBoolean(shapeB, "-");]]></desc>
+        </word>
+        
+        
+        
+        <word name = "split">
+            <desc><![CDATA[ Splits the shape along the specified axis.
+            <p>
+            <b>Signature:</b>
+            split("axis", {dimensionsList}){productsList};
+            </p>
+            <p><h4>Remarks</h4>
+            The number of elements in the dimensionslist must match the number
+            of elements in the productsList.
+            </p>
+            ]]></desc>
+        </word>        
+        <word name = "repeat">
+            <desc><![CDATA[ Splits the shape along the specified axis using the
+            specified intervals, repeating them until the end of the shape is reached.
+            <p>
+            <b>Signature:</b>
+            repeat("axis", {dimensionsList}, offset){productsList};
+            </p>
+            <p><h4>Remarks</h4>
+            The number of elements in the dimensionslist must match the number
+            of elements in the productsList.
+            <i>offset</i> is used to shift the intervals along the axis.
+            </p>
+            ]]></desc>
+        </word>           
+        <word name = "useAttributes">
+            <desc><![CDATA[ Specifies the properties file to be use to set attribute values.
+            <p>
+            <b>Signature:</b>
+            useAttributes("filePath", "<block name>");
+            </p>
+            <p><h4>Remarks</h4>
+            The filePath is relative to the current position of the grammar file.
+            <i>block name</i> specifies which block to use from the attributes file.
+            </p>
+            ]]></desc>
+        </word>           
+        <word name = "instances">
+            <desc><![CDATA[ Retrieves all the instances that satisfy the criteria.
+            <p>
+            <b>Signature:</b>
+            instances("path_like_criteria");
+            </p>
+            <p><h4>Remarks</h4>
+            The criteria is specified in a manner similar to paths, except for that
+            the matches don't have to have the path elements consecutively in their heirarchy.
+            </p>
+            ]]></desc>
+        </word>             
+        <word name = "terminals">
+            <desc><![CDATA[ Retrieves all the terminals that satisfy the criteria.
+            <p>
+            <b>Signature:</b>
+            terminals("path_like_criteria");
+            </p>
+            <p><h4>Remarks</h4>
+            The criteria is specified in a manner similar to paths, except for that
+            the matches don't have to have the path elements consecutively in their heirarchy.
+            </p>
+            ]]></desc>
+        </word>        
+        <word name = "Math">
+            <desc><![CDATA[ A class containing common mathematical functions and constants.
+            <p>
+            <p><h4>Remarks</h4>
+            The number of elements in the dimensionslist must match the number
+            of elements in the productsList.
+            </p>
+            ]]></desc>
+        </word>        
+        <word name = "void">
+            <desc><![CDATA[Used to make a terminal invisible.
+            <p><h4>Remarks</h4>
+            The terminal can still be referenced using the instances function.
+            </p>
+            ]]></desc>
+        </word>        
+        <word name = "cos">
+            <desc/>
+        </word>        
+        <word name = "sin">
+            <desc/>
+        </word>        
+        <word name = "min">
+            <desc/>
+        </word>
+        <word name = "max">
+            <desc/>
+        </word>
+        <word name = "j3d">
+            <desc/>
+        </word>
+        <word name = "round">
+            <desc/>
+        </word>
+        <word name = "terminal">
+            <desc/>
+        </word>
+    </wordGroup>
+</PSML>

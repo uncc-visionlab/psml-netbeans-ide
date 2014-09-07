@@ -1,0 +1,9 @@
+public class Sample extends ShapeGrammar {
+    public Sample(final Shape myShape) {
+        rules {
+        }
+    }
+    public static void main(String[] args) {
+        Sample s = new Sample(new Shape())
+    }
+}

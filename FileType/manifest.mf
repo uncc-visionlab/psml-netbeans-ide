@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.bag3d.netbeans.psml.filetype
+OpenIDE-Module-Localizing-Bundle: org/bag3d/netbeans/psml/filetype/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

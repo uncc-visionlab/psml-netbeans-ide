@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Editors">
+        <folder name="text">
+            <folder name="x-psml">
+                <!-- SYNTAX HIGHLIGHTING START -->
+<!--
+                <attr name="displayName" bundlevalue="org.uncc.psml.editortools.Bundle#Editors/text/x-psml"/>
+-->
+                <file name="org-netbeans-modules-editor-NbEditorKit.instance"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.bag3d.netbeans.psml.editortools.Bundle"/>
+                <folder name="FontsColors">
+                    <folder name="NetBeans">
+                        <folder name="Defaults">
+                            <file name="SyntaxColors.xml" url="SyntaxColors.xml">
+<!--
+                                <attr name="displayName" bundlevalue="org.bag3d.netbeans.psml.editortools.Bundle#Editors/text/x-psml/FontsColors/NetBeans/Defaults/SyntaxColors.xml"/>
+-->                                
+                                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.bag3d.netbeans.psml.editortools.Bundle"/>                                
+                            </file>
+                        </folder>
+                    </folder>
+                </folder>
+                <!-- SYNTAX HIGHLIGHTING END -->
+
+                <file name="org-bag3d-netbeans-psml-editortools-parser-PSMParserFactory.instance"/>
+                <file name="org-bag3d-netbeans-psml-editortools-parser-SyntaxErrorsHighlightingTaskFactory.instance"/>
+
+                <file name="org-bag3d-netbeans-psml-editortools-codecompletion-PSMTypedTextInterceptorFactory.instance"/>
+                <file name="org-bag3d-netbeans-psml-editortools-codecompletion-PSMDeletedTextInterceptorFactory.instance"/>
+               
+                <file name="org-bag3d-netbeans-psml-editortools-indentation-PSMIndentTaskFactory.instance"/>
+                <file name="org-bag3d-netbeans-psml-editortools-indentation-PSMReformatTaskFactory.instance"/>
+                <file name="org-bag3d-netbeans-psml-editortools-indentation-AutoIndenter.instance">
+                     <attr name="instanceOf" stringvalue="org.netbeans.spi.editor.typinghooks.TypedTextInterceptor$Factory"/>
+                     <attr name="instanceCreate" methodvalue="org.netbeans.modules.editor.indent.spi.support.AutomatedIndenting.createHotCharsIndenter"/>
+                     <attr name="regex1" stringvalue="\s*\}"/>
+                     <attr name="regex2" stringvalue="\s*;"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

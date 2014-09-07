@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+
+    <fontcolor name="type"              foreColor="006699" default="default"/>
+    <fontcolor name="string"            foreColor="dd8800" default="default"/>
+    <fontcolor name="terminal"          foreColor="9900ff" default="default"/>
+    <fontcolor name="keyword"           foreColor="blue" default="default"/>
+    <!-- psm-identifier-->
+    <fontcolor name="number"            foreColor="red" default="default"/>
+    <fontcolor name="colon"             foreColor="9900ff" bgColor="e1e1e1" default="default">
+    </fontcolor>
+    <fontcolor name="comment"           foreColor="008800" default="default"/>
+</fontscolors>
