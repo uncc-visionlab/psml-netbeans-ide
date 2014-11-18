@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module: org.bag3d.netbeans.sampleprojects
-OpenIDE-Module-Localizing-Bundle: org/bag3d/netbeans/sampleprojects/Bundle.properties
-OpenIDE-Module-Specification-Version: 1.0
-
