@@ -86,6 +86,8 @@ public class AntBasedProjectLogicalView implements LogicalViewProvider {
                 CommonProjectActions.newFileAction(),
                 //The 'null' indicates that the default icon will be used:
                 ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_BUILD, "Build Project", null),
+                CommonProjectActions.moveProjectAction(),
+                CommonProjectActions.renameProjectAction(),
                 CommonProjectActions.copyProjectAction(),
                 CommonProjectActions.deleteProjectAction(),
                 CommonProjectActions.setAsMainProjectAction(),
@@ -103,7 +105,6 @@ public class AntBasedProjectLogicalView implements LogicalViewProvider {
 //                CommonProjectActions.closeProjectAction()
 //            };
 //        }
-
         @Override
         public Image getIcon(int type) {
             return ImageUtilities.loadImage(AntBasedProject.ICON_RESOURCE);
