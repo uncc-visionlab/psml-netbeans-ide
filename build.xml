@@ -23,8 +23,8 @@
             <property name="generator-jdk-location-forward-slashes" value="${java.home}"/>
             <!-- <property name="generated-installers-location-forward-slashes" value="${basedir}/build/installer"/> -->
             <property name="pack200.enabled" value="false"/>
-            <!-- <property name="nbi.icon.file" value="${basedir}/jmonkeyplatform.png"/> -->
-            <!-- <property name="nbi.dock.icon.file" value="${basedir}/jmonkeyplatform.icns"/> -->
+            <property name="nbi.icon.file" value="${basedir}/branding/core/core.jar/org/netbeans/core/startup/frame48.gif"/>
+            <!-- <property name="nbi.dock.icon.file "value="${basedir}/jmonkeyplatform.icns"/> -->
         </ant>
     </target>
     <!--
