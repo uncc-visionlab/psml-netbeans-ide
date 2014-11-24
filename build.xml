@@ -7,17 +7,17 @@
     <import file="nbproject/build-impl.xml"/>
     <target name="build-installers">
         <property file="nbproject/project.properties"/>
-        <ant antfile="template.xml" dir="nbi/stub">
-            <property name="harness_basedir" value="${basedir}/resources/harness" />
-            <property name="nbi_basedir" value="${basedir}/resources/harness/nbi" />
+        <property name="harness.basedir" value="${basedir}/resources/harness" />
+        <property name="nbi.basedir" value="${basedir}/resources/harness/nbi" />
+        <ant antfile="template.xml" dir="resources/harness/nbi/stub">
             <property name="suite.location" value="${basedir}"/>
             <property name="suite.nbi.product.uid" value="${app.name}"/>
             <property name="suite.nbi.product.version" value="${plugins.version}.0.0"/>
-            <property name="nbi.stub.location" value="${nbi_basedir}/stub"/>
-            <property name="nbi.stub.common.location" value="${nbi_basedir}/.common"/>
-            <property name="nbi.ant.tasks.jar" value="${harness_basedir}/modules/ext/nbi-ant-tasks.jar"/>
-            <property name="nbi.registries.management.jar" value="${harness_basedir}/modules/ext/nbi-registries-management.jar"/>
-            <property name="nbi.engine.jar" value="${harness_basedir}/modules/ext/nbi-engine.jar"/>
+            <property name="nbi.stub.location" value="${nbi.basedir}/stub"/>
+            <property name="nbi.stub.common.location" value="${nbi.basedir}/.common"/>
+            <property name="nbi.ant.tasks.jar" value="${harness.basedir}/modules/ext/nbi-ant-tasks.jar"/>
+            <property name="nbi.registries.management.jar" value="${harness.basedir}/modules/ext/nbi-registries-management.jar"/>
+            <property name="nbi.engine.jar" value="${harness.basedir}/modules/ext/nbi-engine.jar"/>
             <!--<property name="nbi.license.file" value="${basedir}/jme-license.txt"/>-->
             <property name="generate.installer.for.platforms" value="windows linux macosx"/>
             <property name="generator-jdk-location-forward-slashes" value="${java.home}"/>
@@ -43,22 +43,5 @@
 -Dpack200.enabled=false
 -Dnbi.registries.management.jar=/server/apps64/netbeans-8.0/harness/modules/ext/nbi-registries-management.jar
 build
-
-    ant -f resources/harness/nbi/stub/template.xml 
--Dnbi.stub.location=/server/apps64/netbeans-8.0/harness/nbi/stub 
--Dnbi.engine.jar=/server/apps64/netbeans-8.0/harness/modules/ext/nbi-engine.jar 
--Dnbi.stub.common.location=/server/apps64/netbeans-8.0/harness/nbi/.common 
--Dsuite.nbi.product.uid=psml. 
--Dnbi.icon.file=/home.old/arwillis/cvs/src/active/PSML2.1/branding/core/core.jar/org/netbeans/core/startup/frame48.gif 
--Dsuite.location=/home.old/arwillis/cvs/src/active/PSML2.1 
-"-Dgenerate.installer.for.platforms=windows linux macosx" 
--Dnbi.ant.tasks.jar=/server/apps64/netbeans-8.0/harness/modules/ext/nbi-ant-tasks.jar 
--Dgenerator-jdk-location-forward-slashes=/server/apps64/jdk1.7.0_25 
--Dnbi.license.file=/tmp/license4198676716464968628.txt 
--Dnbi.dock.icon.file=/server/apps64/netbeans-8.0/harness/etc/applicationIcon.icns 
--Dpack200.enabled=false 
--Dnbi.registries.management.jar=/server/apps64/netbeans-8.0/harness/modules/ext/nbi-registries-management.jar 
-build
-
     -->    
 </project>
