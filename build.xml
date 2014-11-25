@@ -6,6 +6,20 @@
     <description>Builds the module suite PSML2.1.</description>
     <import file="nbproject/build-impl.xml"/>
     <target name="build-installers">
+        <!--
+        <replaceregexp file="${basedir}/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties"
+               match="currentVersion=(.*)"
+               replace="currentVersion=${app.title} ${app.version}"
+               byline="true"/>
+        <replaceregexp file="${basedir}/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties"
+               match="CTL_MainWindow_Title=(.*)"
+               replace="CTL_MainWindow_Title=${app.title} ${app.version}"
+               byline="true"/>
+        <replaceregexp file="${basedir}/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties"
+               match="CTL_MainWindow_Title_No_Project=(.*)"
+               replace="CTL_MainWindow_Title_No_Project=${app.title} ${app.version}"
+               byline="true"/>  
+        -->      
         <property file="nbproject/project.properties"/>
         <property name="harness.basedir" value="${basedir}/resources/harness" />
         <property name="nbi.basedir" value="${basedir}/resources/harness/nbi" />
@@ -24,7 +38,7 @@
             <!-- <property name="generated-installers-location-forward-slashes" value="${basedir}/build/installer"/> -->
             <property name="pack200.enabled" value="false"/>
             <property name="nbi.icon.file" value="${basedir}/branding/core/core.jar/org/netbeans/core/startup/frame48.gif"/>
-            <!-- <property name="nbi.dock.icon.file "value="${basedir}/jmonkeyplatform.icns"/> -->
+            <!-- <property name="nbi.dock.icon.file " value="${basedir}/jmonkeyplatform.icns"/> -->
         </ant>
     </target>
     <!--

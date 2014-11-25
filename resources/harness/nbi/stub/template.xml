@@ -82,10 +82,10 @@
         </copy>
 
         <!-- START MODIFIED BY ARW 11/2014 -->
-<!--        
         <property name="product-uid"  value="${suite.nbi.product.uid}"/>
--->
+<!--
         <property name="product-uid"  value="psml"/>
+-->
         <!-- END MODIFIED BY ARW 11/2014 -->
 
         <condition property="icon.path" value="${nbi.icon.file}" else="${installer.build.dir}/ext/components/products/helloworld/data/icon48.png">
