@@ -33,8 +33,8 @@
             <property name="nbi.registries.management.jar" value="${harness.basedir}/modules/ext/nbi-registries-management.jar"/>
             <property name="nbi.engine.jar" value="${harness.basedir}/modules/ext/nbi-engine.jar"/>
             <!--<property name="nbi.license.file" value="${basedir}/jme-license.txt"/>-->
-            <!--<property name="generate.installer.for.platforms" value="windows linux macosx"/>-->
-            <property name="generate.installer.for.platforms" value="linux"/>
+            <property name="generate.installer.for.platforms" value="windows linux macosx"/>
+            <!--<property name="generate.installer.for.platforms" value="linux"/>-->
             <property name="generator-jdk-location-forward-slashes" value="${java.home}"/>
             <!-- <property name="generated-installers-location-forward-slashes" value="${basedir}/build/installer"/> -->
             <property name="pack200.enabled" value="false"/>
