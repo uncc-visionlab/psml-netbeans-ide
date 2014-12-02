@@ -5,7 +5,7 @@
 <project name="PSML2.1" basedir=".">
     <description>Builds the module suite PSML2.1.</description>
     <import file="nbproject/build-impl.xml"/>
-    <target name="build-installers">
+    <target name="build-installers" depends="branding">
         <!--
         <replaceregexp file="${basedir}/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties"
                match="currentVersion=(.*)"
@@ -33,11 +33,13 @@
             <property name="nbi.registries.management.jar" value="${harness.basedir}/modules/ext/nbi-registries-management.jar"/>
             <property name="nbi.engine.jar" value="${harness.basedir}/modules/ext/nbi-engine.jar"/>
             <!--<property name="nbi.license.file" value="${basedir}/jme-license.txt"/>-->
-            <property name="generate.installer.for.platforms" value="windows linux macosx"/>
+            <!--<property name="generate.installer.for.platforms" value="windows linux macosx"/>-->
+            <property name="generate.installer.for.platforms" value="linux"/>
             <property name="generator-jdk-location-forward-slashes" value="${java.home}"/>
             <!-- <property name="generated-installers-location-forward-slashes" value="${basedir}/build/installer"/> -->
             <property name="pack200.enabled" value="false"/>
-            <property name="nbi.icon.file" value="${basedir}/branding/core/core.jar/org/netbeans/core/startup/frame48.gif"/>
+            <!--<property name="nbi.icon.file" value="${basedir}/branding/core/core.jar/org/netbeans/core/startup/frame48.gif"/>-->
+            <property name="nbi.icon.file" value="${basedir}/resources/branding/icons/PSML_icon_48x48.png"/>
             <!-- <property name="nbi.dock.icon.file " value="${basedir}/jmonkeyplatform.icns"/> -->
         </ant>
     </target>
