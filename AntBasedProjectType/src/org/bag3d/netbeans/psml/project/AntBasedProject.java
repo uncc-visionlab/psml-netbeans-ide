@@ -129,6 +129,7 @@ public class AntBasedProject implements Project {
             ActionProvider.COMMAND_DELETE,
             ActionProvider.COMMAND_COPY,
             ActionProvider.COMMAND_BUILD,
+            ActionProvider.COMMAND_REBUILD,
             ActionProvider.COMMAND_CLEAN,
             ActionProvider.COMMAND_COMPILE_SINGLE,
             ActionProvider.COMMAND_RUN,
@@ -163,6 +164,14 @@ public class AntBasedProject implements Project {
                     Exceptions.printStackTrace(ex);
                 }
             }
+            if (string.equals(ActionProvider.COMMAND_REBUILD)) {
+                try {
+                    FileObject buildImpl = helper.getProjectDirectory().getFileObject("build.xml");
+                    ActionUtils.runTarget(buildImpl, new String[]{"clean","compile"}, null);
+                } catch (IOException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+            }
             if (string.equals(ActionProvider.COMMAND_CLEAN)) {
                 try {
                     FileObject buildImpl = helper.getProjectDirectory().getFileObject("build.xml");
@@ -170,7 +179,7 @@ public class AntBasedProject implements Project {
                 } catch (IOException ex) {
                     Exceptions.printStackTrace(ex);
                 }
-            }
+            }            
             if (string.equals(ActionProvider.COMMAND_COMPILE_SINGLE)) {
                 try {
                     FileObject buildImpl = helper.getProjectDirectory().getFileObject("build.xml");
@@ -208,6 +217,8 @@ public class AntBasedProject implements Project {
             } else if ((command.equals(ActionProvider.COMMAND_COPY))) {
                 return true;
             } else if ((command.equals(ActionProvider.COMMAND_BUILD))) {
+                return true;
+            } else if ((command.equals(ActionProvider.COMMAND_REBUILD))) {
                 return true;
             } else if ((command.equals(ActionProvider.COMMAND_CLEAN))) {
                 return true;

@@ -85,7 +85,9 @@ public class AntBasedProjectLogicalView implements LogicalViewProvider {
             Action[] nodeActions = new Action[]{
                 CommonProjectActions.newFileAction(),
                 //The 'null' indicates that the default icon will be used:
-                ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_BUILD, "Build Project", null),
+                ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_BUILD, "Build", null),
+                ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_REBUILD, "Clean and Build", null),
+                ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_CLEAN, "Clean", null),
                 CommonProjectActions.moveProjectAction(),
                 CommonProjectActions.renameProjectAction(),
                 CommonProjectActions.copyProjectAction(),
@@ -140,14 +142,16 @@ public class AntBasedProjectLogicalView implements LogicalViewProvider {
 
         @Override
         public Action[] getActions(boolean arg0) {
-            Action[] nodeActions = new Action[7];
+            Action[] nodeActions = new Action[8];
             nodeActions[0] = CommonProjectActions.newFileAction();
             //The 'null' indicates that the default icon will be used:
-            nodeActions[1] = ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_BUILD, "Build Project", null);
-            nodeActions[2] = CommonProjectActions.copyProjectAction();
-            nodeActions[3] = CommonProjectActions.deleteProjectAction();
-            nodeActions[5] = CommonProjectActions.setAsMainProjectAction();
-            nodeActions[6] = CommonProjectActions.closeProjectAction();
+            nodeActions[1] = ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_BUILD, "Build", null);
+            nodeActions[2] = ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_REBUILD, "Clean and Build", null);
+            nodeActions[3] = ProjectSensitiveActions.projectCommandAction(ActionProvider.COMMAND_CLEAN, "Clean", null);
+            nodeActions[4] = CommonProjectActions.copyProjectAction();
+            nodeActions[5] = CommonProjectActions.deleteProjectAction();
+            nodeActions[6] = CommonProjectActions.setAsMainProjectAction();
+            nodeActions[7] = CommonProjectActions.closeProjectAction();
             return nodeActions;
         }
 
