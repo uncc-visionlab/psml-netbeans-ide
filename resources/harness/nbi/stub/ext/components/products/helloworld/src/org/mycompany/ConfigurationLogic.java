@@ -232,6 +232,16 @@ public class ConfigurationLogic extends ProductConfigurationLogic {
                 ex.printStackTrace();
             }
         }
+        // set permissions:
+        File jreDir = new File(target, "jre");
+        File jreBinDir = new File(jreDir, "bin");
+        for (File file : jreBinDir.listFiles()) {
+            try {
+                file.setExecutable(true);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
 
         // to add uninstaller logic:
         SystemUtils.getNativeUtils().addUninstallerJVM(new LauncherResource(false, target));
