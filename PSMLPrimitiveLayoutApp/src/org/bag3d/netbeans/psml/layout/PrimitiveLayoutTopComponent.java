@@ -5,57 +5,6 @@
  */
 package org.bag3d.netbeans.psml.layout;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
-import org.openide.awt.ActionReferences;
-import org.openide.windows.TopComponent;
-
-/**
- *
- * @author arwillis
- */
-/*@TopComponent.Description(
-        preferredID = "PaintTopComponent",
-        iconBase = "/org/netbeans/paint/new_icon.png", 
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS)
-@TopComponent.Registration(
-        mode = "editor", 
-        openAtStartup = true)
-@ActionID(category = "Window", 
-        id = "org.netbeans.paint.PaintTopComponent")
-@ActionReferences({
-    @ActionReference(
-        path = "Menu/Window", 
-        position = 0),
-    @ActionReference(
-        path = "Toolbars/File", 
-        position = 0)
-})
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_NewCanvasAction")
-@Messages({"CTL_NewCanvasAction=New Canvas",
-        "LBL_Clear=Clear",
-        "LBL_Foreground=Foreground",
-        "LBL_BrushSize=Brush Size",
-        "# {0} - image",
-        "UnsavedImageNameFormat=Image {0}"})
-public class PrimitiveLayoutTopComponent extends TopComponent implements ActionListener, ChangeListener {  
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void stateChanged(ChangeEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}*/
-
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -78,14 +27,14 @@ import org.openide.windows.TopComponent;
 
 @TopComponent.Description(
         preferredID = "PaintTopComponent",
-        iconBase = "/org/bag3d/psml/netbeans/paint/new_icon.png", 
+        iconBase = "/org/bag3d/netbeans/psml/layout/new_icon.png", 
         persistenceType = TopComponent.PERSISTENCE_ALWAYS)
 @TopComponent.Registration(
         mode = "editor", 
         openAtStartup = true)
 @ActionID(
         category = "Window", 
-        id = "org.netbeans.paint.PaintTopComponent")
+        id = "org.bag3d.netbeans.psml.layout.PaintTopComponent")
 @ActionReferences({
     @ActionReference(
         path = "Menu/Window", 
