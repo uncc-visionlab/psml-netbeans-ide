@@ -2,25 +2,35 @@
 <!-- You may freely edit this file. See harness/README in the NetBeans platform -->
 <!-- for some information on what you could do (e.g. targets to override). -->
 <!-- If you delete this file and reopen the project it will be recreated. -->
-<project name="PSML2.1" basedir=".">
-    <description>Builds the module suite PSML2.1.</description>
+<project name="PSMLIDE" basedir=".">
+    <description>Builds the module suite for the PSML IDE</description>
     <import file="nbproject/build-impl.xml"/>
-    <target name="build-installers" depends="branding">
-        <!--
+    
+       <property file="nbproject/project.properties"/>
+       <tstamp>
+           <!--<format property="timestamp" pattern="yyyy-MM-dd HH:mm:ss z" />-->
+           <format property="timestamp" pattern="yyyy-MM-dd" />
+       </tstamp>
+       <buildnumber file="build.number"/>
+       <propertyfile
+           file="${basedir}/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties" 
+           comment="Updated by build script">
+           <entry key="currentVersion" value="${app.title} ${app.version}.${build.number} ${timestamp}" />
+       </propertyfile>
         <replaceregexp file="${basedir}/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties"
                match="currentVersion=(.*)"
-               replace="currentVersion=${app.title} ${app.version}"
+               replace="currentVersion=${app.title} ${app.version}.${build.number} ${timestamp}"
                byline="true"/>
         <replaceregexp file="${basedir}/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties"
                match="CTL_MainWindow_Title=(.*)"
-               replace="CTL_MainWindow_Title=${app.title} ${app.version}"
+               replace="CTL_MainWindow_Title=${app.title} ${app.version}.${build.number} ${timestamp}"
                byline="true"/>
         <replaceregexp file="${basedir}/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties"
                match="CTL_MainWindow_Title_No_Project=(.*)"
-               replace="CTL_MainWindow_Title_No_Project=${app.title} ${app.version}"
+               replace="CTL_MainWindow_Title_No_Project=${app.title} ${app.version}.${build.number} ${timestamp}"
                byline="true"/>  
-        -->      
-        <property file="nbproject/project.properties"/>
+
+        <target name="build-installers" depends="branding">
         <property name="harness.basedir" value="${basedir}/resources/harness" />
         <property name="nbi.basedir" value="${basedir}/resources/harness/nbi" />
         <ant antfile="template.xml" dir="resources/harness/nbi/stub">
