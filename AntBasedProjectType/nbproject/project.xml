@@ -21,7 +21,7 @@
                     <compile-dependency/>
                     <run-dependency>
                         <release-version>1</release-version>
-                        <specification-version>1.56.1</specification-version>
+                        <specification-version>1.64.1</specification-version>
                     </run-dependency>
                 </dependency>
                 <dependency>
@@ -63,7 +63,7 @@
                     <build-prerequisite/>
                     <compile-dependency/>
                     <run-dependency>
-                        <specification-version>1.33.1</specification-version>
+                        <specification-version>9.2.1</specification-version>
                     </run-dependency>
                 </dependency>
                 <dependency>
@@ -71,7 +71,7 @@
                     <build-prerequisite/>
                     <compile-dependency/>
                     <run-dependency>
-                        <specification-version>8.8.1</specification-version>
+                        <specification-version>9.8.1</specification-version>
                     </run-dependency>
                 </dependency>
                 <dependency>
@@ -114,55 +114,71 @@
                         <specification-version>8.22.1</specification-version>
                     </run-dependency>
                 </dependency>
+                <dependency>
+                    <code-name-base>org.openide.util.ui</code-name-base>
+                    <build-prerequisite/>
+                    <compile-dependency/>
+                    <run-dependency>
+                        <specification-version>9.4.1</specification-version>
+                    </run-dependency>
+                </dependency>
             </module-dependencies>
             <public-packages/>
             <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-natives-macosx-universal.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-natives-macosx-universal.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
                 <runtime-relative-path>ext/jogl-all-natives-linux-amd64.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/jogl-all-natives-linux-amd64.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/ant-contrib-1.0b3.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/ant-contrib-1.0b3.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-natives-windows-amd64.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-amd64.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/jogl-all-natives-windows-i586.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-all-natives-windows-i586.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/ShaRP.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/ShaRP.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/antlr-runtime-4.1.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/antlr-runtime-4.1.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/jogl-all.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-all.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-natives-linux-i586.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-i586.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/j3dutils.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/j3dutils.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/PSML2Java.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/PSML2Java.jar</binary-origin>
+                <runtime-relative-path>ext/jogl-all.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-macosx-universal.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-macosx-universal.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jogl-all-natives-windows-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-windows-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/vecmath.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/vecmath.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/antlr-runtime-4.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/antlr-runtime-4.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/bridj-0.6.2-execstack.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bridj-0.6.2-execstack.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-windows-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ShaRP.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ShaRP.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ant-contrib-1.0b3.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ant-contrib-1.0b3.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ImageRover.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ImageRover.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/j3dcore.jar</runtime-relative-path>
@@ -173,36 +189,28 @@
                 <binary-origin>release/modules/ext/JCarve.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-natives-linux-amd64.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-amd64.jar</binary-origin>
+                <runtime-relative-path>ext/jogl-all-natives-linux-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-linux-i586.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/gluegen-rt-natives-windows-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-amd64.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/PSML2Java.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/PSML2Java.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/jogl-all-natives-macosx-universal.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/jogl-all-natives-macosx-universal.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/bridj-0.6.2-execstack.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/bridj-0.6.2-execstack.jar</binary-origin>
+                <runtime-relative-path>ext/jogl-all-natives-windows-i586.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all-natives-windows-i586.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/ImageRover.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/ImageRover.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/jogl-all-natives-windows-amd64.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-all-natives-windows-amd64.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/jogl-all-natives-linux-i586.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-all-natives-linux-i586.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-natives-windows-i586.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-i586.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/vecmath.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/vecmath.jar</binary-origin>
+                <runtime-relative-path>ext/gluegen-rt-natives-linux-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-linux-amd64.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>
