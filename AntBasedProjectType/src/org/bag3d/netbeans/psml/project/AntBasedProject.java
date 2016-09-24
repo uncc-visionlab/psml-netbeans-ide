@@ -167,7 +167,7 @@ public class AntBasedProject implements Project {
             if (string.equals(ActionProvider.COMMAND_REBUILD)) {
                 try {
                     FileObject buildImpl = helper.getProjectDirectory().getFileObject("build.xml");
-                    ActionUtils.runTarget(buildImpl, new String[]{"clean","compile"}, null);
+                    ActionUtils.runTarget(buildImpl, new String[]{"clean", "compile"}, null);
                 } catch (IOException ex) {
                     Exceptions.printStackTrace(ex);
                 }
@@ -179,7 +179,7 @@ public class AntBasedProject implements Project {
                 } catch (IOException ex) {
                     Exceptions.printStackTrace(ex);
                 }
-            }            
+            }
             if (string.equals(ActionProvider.COMMAND_COMPILE_SINGLE)) {
                 try {
                     FileObject buildImpl = helper.getProjectDirectory().getFileObject("build.xml");
