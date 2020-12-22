@@ -39,7 +39,7 @@ public class PSMIndentTask implements IndentTask {
     public void reindent() throws BadLocationException {
         StyledDocument doc = (StyledDocument) context.document();
         try {
-            TokenHierarchy tokenHierarchy = TokenHierarchy.get(doc);
+            TokenHierarchy<?> tokenHierarchy = TokenHierarchy.get(doc);
             LanguagePath languagePath = (LanguagePath) tokenHierarchy.languagePaths().toArray()[0];
             Iterator<Context.Region> it = context.indentRegions().iterator();
             while (it.hasNext()) {
