@@ -12,6 +12,8 @@ import javax.swing.text.Document;
 import javax.swing.text.Element;
 import javax.swing.text.JTextComponent;
 import javax.swing.text.StyledDocument;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
 import org.bag3d.netbeans.psml.editortools.lexer.PSML2Lexer;
 import org.netbeans.api.editor.completion.Completion;
 import org.netbeans.api.editor.mimelookup.MimeRegistration;
@@ -29,7 +31,8 @@ import org.bag3d.netbeans.psml.editortools.lexer.PSMTokenId;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.XMLReaderFactory;
+//import org.xml.sax.helpers.XMLReaderFactory;
+import javax.xml.parsers.SAXParserFactory;
 
 /**
  *
@@ -45,10 +48,14 @@ public class PSMEditorCodeCompletionProvider implements CompletionProvider {
         if (true) {
             keywords = new ArrayList<CodeCompletionWord>(15);
             try {
-                XMLReader reader = XMLReaderFactory.createXMLReader();
+                //XMLReader reader = XMLReaderFactory.createXMLReader();
+                SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+                SAXParser parser = parserFactory.newSAXParser();
+                XMLReader reader = parser.getXMLReader();
                 reader.setContentHandler(new PSMLanguageReader(keywords));
                 reader.parse(new InputSource(PSMCompletionItem.class.getResourceAsStream("PSMLanguage.xml")));
-
+            } catch (ParserConfigurationException ex) {
+                Exceptions.printStackTrace(ex);
             } catch (SAXException ex) {
                 Exceptions.printStackTrace(ex);
             } catch (IOException ex) {
@@ -56,7 +63,8 @@ public class PSMEditorCodeCompletionProvider implements CompletionProvider {
             }
         }
     }
-    @SuppressWarnings("unchecked")
+
+    //@SuppressWarnings("unchecked")
     @Override
     public CompletionTask createTask(int queryType, final JTextComponent jtc) {
         if (queryType != CompletionProvider.COMPLETION_QUERY_TYPE) {
@@ -94,11 +102,11 @@ public class PSMEditorCodeCompletionProvider implements CompletionProvider {
                 }
 
                 StyledDocument doc = (StyledDocument) jtc.getDocument();
-                TokenHierarchy th = TokenHierarchy.get(doc);
-                TokenSequence<PSMTokenId> sequence = th.tokenSequence();
+                TokenHierarchy<StyledDocument> th = TokenHierarchy.get(doc);
+                TokenSequence<?> sequence = th.tokenSequence();
                 ArrayList<String> identifiers = new ArrayList<String>();
                 while (sequence.moveNext()) {
-                    Token t = sequence.token();
+                    Token<?> t = sequence.token();
                     if (t.id().ordinal() == PSML2Lexer.Identifier) {
                         CharSequence cs = t.text();
                         String text = t.text().toString();
@@ -113,9 +121,10 @@ public class PSMEditorCodeCompletionProvider implements CompletionProvider {
                 for (String id : identifiers) {
                     CodeCompletionWord word = new CodeCompletionWord();
                     word.Name = id;
-                    if(!keywords.contains(word))
+                    if (!keywords.contains(word)) {
                         completionResultSet.addItem(new PSMCompletionItem(id, Color.BLACK,
-                            "", startOffset, caretOffset));
+                                "", startOffset, caretOffset));
+                    }
                 }
                 completionResultSet.finish();
             }
@@ -124,18 +133,19 @@ public class PSMEditorCodeCompletionProvider implements CompletionProvider {
 
     @Override
     public int getAutoQueryTypes(JTextComponent jtc, String string) {
-        if(string.equals(".") || string.equals(":")){
+        if (string.equals(".") || string.equals(":")) {
             try {
                 int offset = jtc.getCaretPosition();
-                String previous = jtc.getText(offset-2, 1);
-                if(!Character.isDigit(previous.charAt(0)))
+                String previous = jtc.getText(offset - 2, 1);
+                if (!Character.isDigit(previous.charAt(0))) {
                     return CompletionProvider.COMPLETION_QUERY_TYPE;
+                }
             } catch (BadLocationException ex) {
                 Exceptions.printStackTrace(ex);
             }
-        }
-        else if(string.equals(";"))
+        } else if (string.equals(";")) {
             Completion.get().hideAll();
+        }
         return 0;
     }
 

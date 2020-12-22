@@ -54,12 +54,13 @@ public class PSMReformatTask implements ReformatTask {
         int length = end - start;
 
         MimePath mimePath = MimePath.parse(context.mimePath());
-        TokenHierarchy tokenHierarchy = TokenHierarchy.get(doc);
+        TokenHierarchy<StyledDocument> tokenHierarchy = TokenHierarchy.get(doc);
         LanguagePath languagePath = LanguagePath.get(org.netbeans.api.lexer.Language.find(mimePath.getMimeType(0)));
-        TokenSequence<PSMTokenId> sequence = (TokenSequence) tokenHierarchy.tokenSequenceList(languagePath, start, end).get(0);
+        TokenSequence<?> sequence = tokenHierarchy.tokenSequenceList(languagePath, start, end).get(0);
         int caretPos = context.caretOffset();
         sequence.move(caretPos);
-        Token<PSMTokenId> currentToken = null;
+        //Token<PSMTokenId> currentToken = null;
+        Token<?> currentToken = null;
         if (sequence.moveNext()) {
             currentToken = sequence.token();
         }
@@ -77,7 +78,7 @@ public class PSMReformatTask implements ReformatTask {
         try {
             sequence.moveStart();
             while (sequence.moveNext()) {
-                Token<PSMTokenId> t = sequence.token();
+                Token<?> t = sequence.token();
                 insert(null, sb);
                 Integer count = 0;
                 switch (t.id().ordinal()) {
@@ -294,7 +295,7 @@ public class PSMReformatTask implements ReformatTask {
         }
     }
 
-    private void insert(Token<PSMTokenId> t, StringBuilder sb) {
+    private void insert(Token<?> t, StringBuilder sb) {
 
         if (isNewLine) {
             int indent = baseIndent + (nestedIndent ? offset + 1 : offset) * indentSize;
