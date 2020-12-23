@@ -38,7 +38,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 // TODO define position attribute
-@TemplateRegistration(folder = "Project/Samples/ApiSupport", displayName = "#PSMLSampleProject_displayName", description = "PSMLSampleProjectDescription.html", iconBase = "org/bag3d/netbeans/sampleproject/PSMLSampleProject.png", content = "PSMLSampleProject.zip")
+@TemplateRegistration(folder = "Project/Samples/PSML", displayName = "#PSMLSampleProject_displayName", description = "PSMLSampleProjectDescription.html", iconBase = "org/bag3d/netbeans/sampleproject/PSMLSampleProject.png", content = "PSMLSampleProject.zip")
 @Messages("PSMLSampleProject_displayName=PSML Sample Project")
 public class PSMLSampleProjectWizardIterator implements WizardDescriptor./*Progress*/InstantiatingIterator {
 
@@ -64,7 +64,7 @@ public class PSMLSampleProjectWizardIterator implements WizardDescriptor./*Progr
         };
     }
 
-    public Set/*<FileObject>*/ instantiate(/*ProgressHandle handle*/) throws IOException {
+    public Set<FileObject> instantiate(/*ProgressHandle handle*/) throws IOException {
         Set<FileObject> resultSet = new LinkedHashSet<FileObject>();
         File dirF = FileUtil.normalizeFile((File) wiz.getProperty("projdir"));
         dirF.mkdirs();
