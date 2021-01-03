@@ -68,7 +68,8 @@ $\cdot$ On the “Project Properties” window, choose JDK 1.8 as your Java Plat
 
 $\cdot$ Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the $\bf{Usage 1}$
 
-# Video Demo
+# Demo Video
+We provide a demo video of running the some PSML example programs. The video below shows how we run the sample programs and also gives a basic introduction to the model design.
 https://drive.google.com/file/d/1dCdQWRhbi34i00vUQ648sRAo6xtSg_Ty/view?usp=sharing
 
 
