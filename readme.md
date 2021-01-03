@@ -1,6 +1,6 @@
 # PSML-Netbeans-IDE
 
-This repository contains the official implementation of the Volumetric Procedural Models for Shape Representation. The paper describes a volumetric approach for procedural shape modeling and a new Procedural Shape Modeling Language (PSML) that introduces a distinct programming construct for procedural model generation that borrows structure and syntax for sequential statements from Java and borrows structure and syntax for shape grammars and their production rules from L-systems. This repo contains the IDE implementation for PSML programs. It also provides some sample programes that are showed in the paper.
+This repository contains the official PSML IDE implementation for our paper $\bf{Volumetric Procedural Models for Shape Representation}$. The paper describes a volumetric approach for procedural shape modeling and a new Procedural Shape Modeling Language (PSML) that introduces a distinct programming construct for procedural model generation that borrows structure and syntax for sequential statements from Java and borrows structure and syntax for shape grammars and their production rules from L-systems. This repo contains the IDE implementation for PSML programs. It also provides some sample programes that are showed in the paper.
 
 
 
@@ -21,28 +21,6 @@ In the release page, we release the PSML IDE binaries. There are two forms of th
 
 ## Usage 1
 
-[psml-netbeans-v11.3-plugin-modules.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psml-netbeans-v11.3-plugin-modules.zip) (Netbeans +v11.3 required)
-
-This file contains the nbm files to install to an Apache Netbeans +v11.3 IDE. It will allow you to explore PSML by compiling and running the PSML sample programs, create your own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
-
-$\cdot$ Download and open Netbeans v11.3 or later
-
-$\cdot$ Download the zip file and extract it
-
-$\cdot$ Go to NetBeans *Tools > Plugins > Downloaded* menu and click on ‘Add Plugins…’. Select the nbm files in your downloaded folder and click “install". This will install the nodejs plugin.
-
-$\cdot$ Clone the whole PSML-NetBeans-IDE project and open it in NetBeans
-
-$\cdot$ One the sidebar, right click the opened project(“PSML IDE”), go to *properties > Manage Java Platforms > Add Platform*, add JDK 1.8 from your computer. It must run using JDK 1.8.
-
-$\cdot$ On the “Project Properties” window, choose JDK 1.8 as your Java Platform then click “OK".
-
-$\cdot$ Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the $\bf{Usage 2}$ below
-
-
-
-## Usage 2
-
 [psmlide-v1.0-linux-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-linux-x64.zip) ([psmlide-v1.0-windows-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-windows-x64.zip))
 
 
@@ -62,13 +40,35 @@ $\cdot$  In the IDE menu, go to *File->New Project*, then in the pop-up window, 
 
 $\cdot$ Now on the left sidebar, under “Projects”, you will see two items “java” and “PSMLSampleProjects”. If the “java” item shows in red font, it means some issues needs to be resolved. To do that, right click the “java” and click “resovle”, then choose "JDK 11” instead of the default "JDK 1.8”.
 
-$\cdot$ Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to rotate or zoom the model. Rotation statitisic will show in the output window of the PSML IDE.
+$\cdot$ Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to visulize the model. Holding left click will enable you to rotate the model and right click to move the model. Hold "Shift + right click" then move the mouse so you can zoom in/out to see more model details. 
+
+$\cdot$ You can right click “BrachGroup test” for more information and operations on the model.
 
 ![PSML-IDE-1](./images/PSML-IDE-1.png)
 
 ![PSML-IDE-2](./images/PSML-IDE-2.png)
 
-# Video Demo
 
+## Usage 2
+[psml-netbeans-v11.3-plugin-modules.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psml-netbeans-v11.3-plugin-modules.zip) (Netbeans +v11.3 required)
+
+This file contains the nbm files to install to an Apache Netbeans +v11.3 IDE. It will allow you to explore PSML by compiling and running the PSML sample programs, create your own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
+
+$\cdot$ Download and open Netbeans v11.3 or later
+
+$\cdot$ Download the zip file and extract it
+
+$\cdot$ Go to NetBeans *Tools > Plugins > Downloaded* menu and click on ‘Add Plugins…’. Select the nbm files in your downloaded folder and click “install". This will install the nodejs plugin.
+
+$\cdot$ Clone the whole PSML-NetBeans-IDE project and open it in NetBeans
+
+$\cdot$ One the sidebar, right click the opened project(“PSML IDE”), go to *properties > Manage Java Platforms > Add Platform*, add JDK 1.8 from your computer. It must run using JDK 1.8.
+
+$\cdot$ On the “Project Properties” window, choose JDK 1.8 as your Java Platform then click “OK".
+
+$\cdot$ Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the $\bf{Usage 1}$
+
+# Video Demo
+https://drive.google.com/file/d/1dCdQWRhbi34i00vUQ648sRAo6xtSg_Ty/view?usp=sharing
 
 
