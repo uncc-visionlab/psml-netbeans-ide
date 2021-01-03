@@ -64,9 +64,9 @@ $\cdot$ Now on the left sidebar, under “Projects”, you will see two items �
 
 $\cdot$ Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to rotate or zoom the model. Rotation statitisic will show in the output window of the PSML IDE.
 
-![PSML-IDE-1](PSML-IDE-1.png)
+![PSML-IDE-1](./images/PSML-IDE-1.png)
 
-![PSML-IDE-2](PSML-IDE-2.png)
+![PSML-IDE-2](./images/PSML-IDE-2.png)
 
 # Video Demo
 
