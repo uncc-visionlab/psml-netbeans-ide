@@ -4,7 +4,7 @@ This repository contains the official PSML IDE implementation for our paper $\bf
 
 
 
-#Requirements:
+# Requirements:
 
 Software: Netbeans +v11.3 IDE
 
@@ -26,23 +26,23 @@ In the release page, we release the PSML IDE binaries. There are two forms of th
 
 This is a complete re-branded version of the Apache Netbeans v11.3 IDE that includes PSML sample programs and the PSML libraries and runtime to allow users to run sample PSML programs, create their own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
 
-$\cdot$ Download the zip file and extract it
+1. Download the zip file and extract it
 
-$\cdot$ Run following:
+2. Run following:
 
 `cd /path_to_psmlide-v1.0-linux-x64/`
 
 `./bin/psmlide`
 
-$\cdot$ PSML IDE will be opened. In the IDE menu, go to *Tools > Plugins > Installed*, make sure the following plugins, “PSML Sample Project”, “Ant”, “AntBasedProjectType”, “FileType”, “EditorTools” and “PSMLPrimitiveLayoutApp”, are activated. 
+3. PSML IDE will be opened. In the IDE menu, go to *Tools > Plugins > Installed*, make sure the following plugins, “PSML Sample Project”, “Ant”, “AntBasedProjectType”, “FileType”, “EditorTools” and “PSMLPrimitiveLayoutApp”, are activated. 
 
-$\cdot$  In the IDE menu, go to *File->New Project*, then in the pop-up window, choose *Samples > PSML* in the “Categories” column and *PSML Sample Project* in the “Projects” column. Click “Next” to create the projcet in your desinated path then click “finish”.
+4. In the IDE menu, go to *File->New Project*, then in the pop-up window, choose *Samples > PSML* in the “Categories” column and *PSML Sample Project* in the “Projects” column. Click “Next” to create the projcet in your desinated path then click “finish”.
 
-$\cdot$ Now on the left sidebar, under “Projects”, you will see two items “java” and “PSMLSampleProjects”. If the “java” item shows in red font, it means some issues needs to be resolved. To do that, right click the “java” and click “resovle”, then choose "JDK 11” instead of the default "JDK 1.8”.
+5. Now on the left sidebar, under “Projects”, you will see two items “java” and “PSMLSampleProjects”. If the “java” item shows in red font, it means some issues needs to be resolved. To do that, right click the “java” and click “resovle”, then choose "JDK 11” instead of the default "JDK 1.8”.
 
-$\cdot$ Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to visulize the model. Holding left click will enable you to rotate the model and right click to move the model. Hold "Shift + right click" then move the mouse so you can zoom in/out to see more model details. 
+6. Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to visulize the model. Holding left click will enable you to rotate the model and right click to move the model. Hold "Shift + right click" then move the mouse so you can zoom in/out to see more model details. 
 
-$\cdot$ You can right click “BrachGroup test” for more information and operations on the model.
+7. You can right click “BrachGroup test” for more information and operations on the model.
 
 ![PSML-IDE-1](./images/PSML-IDE-1.png)
 
@@ -54,19 +54,19 @@ $\cdot$ You can right click “BrachGroup test” for more information and opera
 
 This file contains the nbm files to install to an Apache Netbeans +v11.3 IDE. It will allow you to explore PSML by compiling and running the PSML sample programs, create your own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
 
-$\cdot$ Download and open Netbeans v11.3 or later
+1. Download and open Netbeans v11.3 or later
 
-$\cdot$ Download the zip file and extract it
+2. Download the zip file and extract it
 
-$\cdot$ Go to NetBeans *Tools > Plugins > Downloaded* menu and click on ‘Add Plugins…’. Select the nbm files in your downloaded folder and click “install". This will install the nodejs plugin.
+3. Go to NetBeans *Tools > Plugins > Downloaded* menu and click on ‘Add Plugins…’. Select the nbm files in your downloaded folder and click “install". This will install the nodejs plugin.
 
-$\cdot$ Clone the whole PSML-NetBeans-IDE project and open it in NetBeans
+4. Clone the whole PSML-NetBeans-IDE project and open it in NetBeans
 
-$\cdot$ One the sidebar, right click the opened project(“PSML IDE”), go to *properties > Manage Java Platforms > Add Platform*, add JDK 1.8 from your computer. It must run using JDK 1.8.
+5. On the sidebar, right click the opened project(“PSML IDE”), go to *properties > Manage Java Platforms > Add Platform*, add JDK 1.8 from your computer. It must run using JDK 1.8.
 
-$\cdot$ On the “Project Properties” window, choose JDK 1.8 as your Java Platform then click “OK".
+6. On the “Project Properties” window, choose JDK 1.8 as your Java Platform then click “OK".
 
-$\cdot$ Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the $\bf{Usage 1}$
+7. Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the **Usage 1**.
 
 # Demo Video
 We provide a demo video of running the some PSML example programs. The video below shows how we run the sample programs and also gives a basic introduction to the model design.
