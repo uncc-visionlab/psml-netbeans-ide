@@ -1,6 +1,6 @@
 # PSML-Netbeans-IDE
 
-This repository contains the official PSML IDE implementation for our paper $\bf{Volumetric Procedural Models for Shape Representation}$. The paper describes a volumetric approach for procedural shape modeling and a new Procedural Shape Modeling Language (PSML) that introduces a distinct programming construct for procedural model generation that borrows structure and syntax for sequential statements from Java and borrows structure and syntax for shape grammars and their production rules from L-systems. This repo contains the IDE implementation for PSML programs. It also provides some sample programes that are showed in the paper.
+This repository contains the official PSML IDE implementation for our paper **Volumetric Procedural Models for Shape Representation**. The paper describes a volumetric approach for procedural shape modeling and a new Procedural Shape Modeling Language (PSML) that introduces a distinct programming construct for procedural model generation that borrows structure and syntax for sequential statements from Java and borrows structure and syntax for shape grammars and their production rules from L-systems. This repo contains the IDE implementation for PSML programs. It also provides some sample programes that are showed in the paper.
 
 
 
