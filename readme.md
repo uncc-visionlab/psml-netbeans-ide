@@ -21,7 +21,7 @@ In the release page, we release the PSML IDE binaries. There are two forms of th
 
 ## Usage 1
 
-[psmlide-v1.0-linux-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-linux-x64.zip) ([psmlide-v1.0-windows-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-windows-x64.zip))
+You can find the required PSML IDE file on the [realease page](https://github.com/uncc-visionlab/psml-netbeans-ide/releases) or directly download here [psmlide-v1.0-linux-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-linux-x64.zip) ([psmlide-v1.0-windows-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-windows-x64.zip))
 
 
 This is a complete re-branded version of the Apache Netbeans v11.3 IDE that includes PSML sample programs and the PSML libraries and runtime to allow users to run sample PSML programs, create their own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
@@ -50,7 +50,7 @@ This is a complete re-branded version of the Apache Netbeans v11.3 IDE that incl
 
 
 ## Usage 2
-[psml-netbeans-v11.3-plugin-modules.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psml-netbeans-v11.3-plugin-modules.zip) (Netbeans +v11.3 required)
+You can find the required plugin for Netbeans on the [realease page](https://github.com/uncc-visionlab/psml-netbeans-ide/releases) or directly download here [psml-netbeans-v11.3-plugin-modules.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psml-netbeans-v11.3-plugin-modules.zip) (Netbeans +v11.3 required)
 
 This file contains the nbm files to install to an Apache Netbeans +v11.3 IDE. It will allow you to explore PSML by compiling and running the PSML sample programs, create your own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
 
