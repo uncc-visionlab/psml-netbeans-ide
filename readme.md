@@ -21,7 +21,7 @@ In the release page, we release the PSML IDE binaries. There are two forms of th
 
 ## Usage 1
 
-You can find the required PSML IDE file on the [realease page](https://github.com/uncc-visionlab/psml-netbeans-ide/releases) or directly download here [psmlide-v1.0-linux-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-linux-x64.zip) ([psmlide-v1.0-windows-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.0-windows-x64.zip))
+You can find the required PSML IDE file on the [release page](https://github.com/uncc-visionlab/psml-netbeans-ide/releases) or directly download here [psmlide-v1.1-linux-x64.zip](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/psmlide-v1.1-linux-x64.zip)
 
 
 This is a complete re-branded version of the Apache Netbeans v11.3 IDE that includes PSML sample programs and the PSML libraries and runtime to allow users to run sample PSML programs, create their own PSML programs and basic visualization tools for viewing PSML generated geometries in 3D.
@@ -30,19 +30,21 @@ This is a complete re-branded version of the Apache Netbeans v11.3 IDE that incl
 
 2. Run following:
 
-`cd /path_to_psmlide-v1.0-linux-x64/`
+`cd /path_to_the_unzip_folder/`
 
 `./bin/psmlide`
 
 3. PSML IDE will be opened. In the IDE menu, go to *Tools > Plugins > Installed*, make sure the following plugins, “PSML Sample Project”, “Ant”, “AntBasedProjectType”, “FileType”, “EditorTools” and “PSMLPrimitiveLayoutApp”, are activated. 
 
-4. In the IDE menu, go to *File->New Project*, then in the pop-up window, choose *Samples > PSML* in the “Categories” column and *PSML Sample Project* in the “Projects” column. Click “Next” to create the projcet in your desinated path then click “finish”.
+4. Download the [PSML sample projects](https://github.com/uncc-visionlab/psml-netbeans-ide/releases/download/v1.0.0-alpha/PSML3SampleProject.zip) and unzip it
 
-5. Now on the left sidebar, under “Projects”, you will see two items “java” and “PSMLSampleProjects”. If the “java” item shows in red font, it means some issues needs to be resolved. To do that, right click the “java” and click “resovle”, then choose "JDK 11” instead of the default "JDK 1.8”.
+5. In the IDE menu, go to *File->Open Project*, then in the pop-up window, open the sample projects that you unzipped in step 4.
 
-6. Right click “PSMLSampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to visulize the model. Holding left click will enable you to rotate the model and right click to move the model. Hold "Shift + right click" then move the mouse so you can zoom in/out to see more model details. 
+6. On the left sidebar, under “Projects”, you will see two items “java” and “PSML3SampleProjects”. If the “java” text is in red, it means some issues needs to be resolved. To do that, right click the “java” and click “resovle”, then choose "JDK 11” instead of the default "JDK 1.8”. Otherwise, go to step 7.
 
-7. You can right click “BrachGroup test” for more information and operations on the model.
+7. Right click “PSML3SampleProjects”, then click “Build” to compile the project. After it compiles, click the key-alike button next to the “PSMLSampleProjects” to open the project, then open “cathedral” by doing the similar operation. After this, right click “Cathedral.psm” then click “run”. It will run the cathedra model we build. Once it finishes running, a window of the rendering program will pop up and you will see the cathedra model. Click “BrachGroup test” to select it, then you are able to visulize the model. Holding left click will enable you to rotate the model and right click to move the model. Hold "Shift + right click" then move the mouse so you can zoom in/out to see more model details. 
+
+8. You can right click “BrachGroup test” for more information and operations on the model.
 
 ![PSML-IDE-1](./images/PSML-IDE-1.png)
 
@@ -66,7 +68,7 @@ This file contains the nbm files to install to an Apache Netbeans +v11.3 IDE. It
 
 6. On the “Project Properties” window, choose JDK 1.8 as your Java Platform then click “OK".
 
-7. Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 4-6 in the **Usage 1**.
+7. Now you can build project then run it. When running, it will open the PSML IDE. You can either create your own PSML programs or follow the steps 3-8 in the **Usage 1** to open our sample programs.
 
 # Demo Video
 We provide a demo video of running the some PSML example programs. The video below shows how we run the sample programs and also gives a basic introduction to the model design.
